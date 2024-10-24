@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@100;200;300;400;500;600;700;800;900&family=Playwrite+HR:wght@100..400&display=swap');
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #6c757d;
+    --navbar-bg: #9205ff;
+    --navbar-text: #fcfcfc;
+    --carousel-indicator-active: #ffffff;
+    --color-bg:#fcfcfc;
+    --text:#fcfcfc;
+  }
+
+
+body{
+    background-color: var(--color-bg);
+    font-family: "Kanit", serif;
+    font-optical-sizing: auto;
+}
+
+  .navbar {
+    background-color: var(--navbar-bg) !important;
+    color: var(--navbar-text) !important;
+  }
+
+  .navbar .nav-link {
+    color: var(--navbar-text) !important;
+  }
+
+  .navbar .nav-link.active {
+    color: var(--primary-color) !important;
+  }
+
+  .navbar-brand {
+    color: var(--primary-color) !important;
+  }
+
+  footer {
+    background-color: var(--navbar-bg);
+    padding: 20px 0; /* เพิ่ม padding เพื่อให้ดูดีขึ้น */
+}
+
+.logo {
+    height: 350px; /* สูงคงที่สำหรับโลโก้ */
+    width: auto; /* ปรับให้โลโก้ขยายตามอัตราส่วน */
+}
+
+.map-container {
+    padding-left: 30px; /* ใช้ padding แทน margin เพื่อเลื่อนแผนที่ไปทางขวา */
+    display: flex; /* เพิ่ม display flex เพื่อควบคุมการจัดเรียง */
+    justify-content: flex-end; /* จัดให้ชิดขวา */
+}
+
+
+@media (max-width: 767px) {
+    /* ปรับขนาดและรูปแบบสำหรับหน้าจอมือถือ */
+    .map-container {
+        margin-left: 0; /* ย้ายไปตำแหน่งเริ่มต้น */
+    }
+
+    .map-container iframe {
+        width: 100%; /* ทำให้ iframe ขนาดเต็ม */
+        height: 300px; /* ปรับสูงตามอัตราส่วน */
+    }
+
+    .logo {
+        width: 100%; /* ทำให้รูปโลโก้ขนาดเต็ม */
+        height: auto; /* ปรับสูงตามอัตราส่วน */
+    }
+}
+   /* CSS สำหรับ main */
+main {
+    font-family: 'Noto Sans Thai Looped', sans-serif;
+    background-color: #f8f9fa; /* สีพื้นหลังอ่อน */
+    padding: 20px;
+}
+
+/* ส่วน Hero */
+.hero-section {
+    background: linear-gradient(to bottom right, rgba(198, 13, 255, 0.8), rgba(0, 123, 255, 0.5)), url('img/hero-background.jpg') no-repeat center center; /* ใส่ภาพพื้นหลัง */
+    background-size: cover;
+    color: white; /* สีตัวอักษร */
+    padding: 50px 20px;
+    border-radius: 10px; /* ขอบมน */
+}
+
+.hero-section h1 {
+    font-size: 2.5rem; /* ขนาดตัวอักษร */
+    font-weight: 700;
+}
+
+.hero-section p {
+    font-size: 1.2rem; /* ขนาดตัวอักษร */
+    margin-bottom: 20px;
+}
+
+/* ปุ่ม */
+.btn-primary {
+    background-color: #007bff; /* สีพื้นหลังปุ่ม */
+    border: none;
+    border-radius: 5px; /* ขอบมน */
+    padding: 10px 20px; /* ขนาดปุ่ม */
+    transition: background-color 0.3s; /* เอฟเฟกต์ในการเปลี่ยนสี */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* สีเมื่อ hover */
+}
+
+/* ส่วน Internships */
+.internships h2 {
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #333; /* สีหัวข้อ */
+}
+
+.internships p {
+    line-height: 1.6; /* ระยะห่างระหว่างบรรทัด */
+    margin-bottom: 20px;
+    color: #555; /* สีข้อความ */
+}
+
+.internships ul {
+    list-style-type: disc; /* สัญลักษณ์ในรายการ */
+    padding-left: 20px; /* ระยะห่างจากซ้าย */
+}
+
+.internships ul li {
+    margin-bottom: 10px; /* ระยะห่างระหว่างรายการ */
+}
+
+/* เอฟเฟกต์การเลื่อน */
+.visible {
+    opacity: 1; /* ปรับความทึบ */
+    transform: translateY(0); /* เลื่อนขึ้น */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* เอฟเฟกต์การเปลี่ยน */
+}
+
+.internship-card-container {
+    opacity: 0; /* เริ่มต้นซ่อน */
+    transform: translateY(20px); /* เลื่อนลง */
+}
+
+/* เพิ่มเติม */
+/*fopoter*/
+@media (max-width: 768px) {
+    footer {
+        padding: 20px;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item {
+        margin-bottom: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .col-lg-6 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .map-container iframe {
+        width: auto;
+        height: 300px;
+        margin-left: 20px;
+    }
+
+    .text-center {
+        font-size: 14px;
+    }
+
+    .logo {
+        width: 320px;
+        height: auto;
+    }
+}
+/* customizable snowflake styling */
+.snowflake {
+    color: #fff;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 5px #000;
+  }
+
+  .snowflake,
+  .snowflake .inner {
+    animation-iteration-count: infinite;
+    animation-play-state: running
+  }
+
+  @keyframes snowflakes-fall {
+    0% {
+      transform: translateY(0)
+    }
+
+    100% {
+      transform: translateY(110vh)
+    }
+  }
+
+  @keyframes snowflakes-shake {
+
+    0%,
+    100% {
+      transform: translateX(0)
+    }
+
+    50% {
+      transform: translateX(80px)
+    }
+  }
+
+  .snowflake {
+    position: fixed;
+    top: -10%;
+    z-index: 9999;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+    animation-name: snowflakes-shake;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out
+  }
+
+  .snowflake .inner {
+    animation-duration: 10s;
+    animation-name: snowflakes-fall;
+    animation-timing-function: linear
+  }
+
+  .snowflake:nth-of-type(0) {
+    left: 1%;
+    animation-delay: 0s
+  }
+
+  .snowflake:nth-of-type(0) .inner {
+    animation-delay: 0s
+  }
+
+  .snowflake:first-of-type {
+    left: 10%;
+    animation-delay: 1s
+  }
+
+  .snowflake:first-of-type .inner,
+  .snowflake:nth-of-type(8) .inner {
+    animation-delay: 1s
+  }
+
+  .snowflake:nth-of-type(2) {
+    left: 20%;
+    animation-delay: .5s
+  }
+
+  .snowflake:nth-of-type(2) .inner,
+  .snowflake:nth-of-type(6) .inner {
+    animation-delay: 6s
+  }
+
+  .snowflake:nth-of-type(3) {
+    left: 30%;
+    animation-delay: 2s
+  }
+
+  .snowflake:nth-of-type(11) .inner,
+  .snowflake:nth-of-type(3) .inner {
+    animation-delay: 4s
+  }
+
+  .snowflake:nth-of-type(4) {
+    left: 40%;
+    animation-delay: 2s
+  }
+
+  .snowflake:nth-of-type(10) .inner,
+  .snowflake:nth-of-type(4) .inner {
+    animation-delay: 2s
+  }
+
+  .snowflake:nth-of-type(5) {
+    left: 50%;
+    animation-delay: 3s
+  }
+
+  .snowflake:nth-of-type(5) .inner {
+    animation-delay: 8s
+  }
+
+  .snowflake:nth-of-type(6) {
+    left: 60%;
+    animation-delay: 2s
+  }
+
+  .snowflake:nth-of-type(7) {
+    left: 70%;
+    animation-delay: 1s
+  }
+
+  .snowflake:nth-of-type(7) .inner {
+    animation-delay: 2.5s
+  }
+
+  .snowflake:nth-of-type(8) {
+    left: 80%;
+    animation-delay: 0s
+  }
+
+  .snowflake:nth-of-type(9) {
+    left: 90%;
+    animation-delay: 1.5s
+  }
+
+  .snowflake:nth-of-type(9) .inner {
+    animation-delay: 3s
+  }
+
+  .snowflake:nth-of-type(10) {
+    left: 25%;
+    animation-delay: 0s
+  }
+
+  .snowflake:nth-of-type(11) {
+    left: 65%;
+    animation-delay: 2.5s
+  }

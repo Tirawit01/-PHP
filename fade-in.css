@@ -1,0 +1,33 @@
+body {
+    transition: opacity 0.7s ease-in-out; /* ปรับเวลาและ ease */
+    opacity: 0; /* เริ่มต้นให้ body ซ่อน */
+}
+
+body.fade-in {
+    opacity: 1; /* ทำให้ body ปรากฏเมื่อโหลด */
+}
+
+.fade-out {
+    opacity: 0; /* ซ่อนเมื่อกำลังเปลี่ยนหน้า */
+}
+
+.fade-in {
+    opacity: 0; /* ซ่อนเมื่อโหลด */
+    transition: opacity 0.7s ease; /* เพิ่มการเปลี่ยนแปลง */
+}
+
+.fade-in.visible {
+    opacity: 1; /* ทำให้เนื้อหาปรากฏ */
+    transition: opacity 0.7s ease; /* เพิ่มการเปลี่ยนแปลง */
+    transform: translateY(0); /* เริ่มจากตำแหน่งที่ถูกปรับ */
+}
+
+.fade-in {
+    transform: translateY(20px); /* ยกขึ้นเล็กน้อย */
+}
+
+.visible {
+    transition: opacity 0.7s ease-in, transform 0.7s ease-in; /* เพิ่มความนุ่มนวล */
+    opacity: 1; /* ทำให้เนื้อหาปรากฏ */
+    transform: translateY(0); /* แก้ไขตำแหน่งให้กลับมา */
+}
